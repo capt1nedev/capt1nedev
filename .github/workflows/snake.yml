@@ -1,0 +1,39 @@
+# Redraws the contribution snake once a day and publishes it to the
+# `output` branch, which README.md links to.
+name: Snake
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/snake.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Colours follow the portfolio: signal greens, ember snake.
+      - uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#FF4D1C&color_dots=#ebedf0,#b3f5dc,#5ce6b4,#00c98c,#00966a
+            dist/snake-dark.svg?color_snake=#FF4D1C&color_dots=#151b23,#003d2c,#006b4c,#00a573,#00e5a0
+
+      - uses: crazy-max/ghaction-github-pages@1d6ee9b181a81033a16bd707a1401afa978daab4 # v5.0.0
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: Update contribution snake
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
