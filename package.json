@@ -1,0 +1,14 @@
+{
+  "name": "capt1nedev-profile",
+  "private": true,
+  "type": "module",
+  "description": "Generates the images in assets/ for github.com/capt1nedev",
+  "scripts": {
+    "build": "node tools/build.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource/syne": "5.3.0",
+    "opentype.js": "2.0.0"
+  }
+}
