@@ -48,12 +48,6 @@ Right now I'm an Associate Software Developer at Thrive Dynamic Business Solutio
 
 [Run the demo](https://github.com/capt1nedev/docx-repro#runnable-example-missing-text-in-mammoth) · [Read a real bug investigation](https://github.com/capt1nedev/docx-repro/blob/v0.1.2/docs/case-study-2323.md) · [Walkthrough](https://gist.github.com/capt1nedev/6946abc2bbd08ead1f8f26c68e16d1c7) · [PyPI](https://pypi.org/project/docx-repro/) · [Share a case](https://github.com/capt1nedev/docx-repro/issues)
 
-**Pull requests upstream**
-
-- [`kucherenko/jscpd#1158`](https://github.com/kucherenko/jscpd/pull/1158) fix(action): propagate scanner exit status
-- [`kucherenko/jscpd#1157`](https://github.com/kucherenko/jscpd/pull/1157) fix(html-reporter): declare finder runtime dependency
-- [`matthewwithanm/python-markdownify#284`](https://github.com/matthewwithanm/python-markdownify/pull/284) Bound table colspan parsing before integer conversion
-
 ## <samp>// installed modules</samp>
 
 <p align="center">
@@ -80,11 +74,8 @@ Right now I'm an Associate Software Developer at Thrive Dynamic Business Solutio
 
 ## <samp>// telemetry</samp>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/capt1nedev/capt1nedev/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/capt1nedev/capt1nedev/output/snake.svg" />
-  <img width="100%" alt="A snake eating Justine's GitHub contribution graph" src="https://raw.githubusercontent.com/capt1nedev/capt1nedev/output/snake.svg" />
-</picture>
+<!-- activity:start -->
+<!-- activity:end -->
 
 <br /><br />
 

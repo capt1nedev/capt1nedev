@@ -1,0 +1,47 @@
+# Rewrites the telemetry block in README.md once a day from public GitHub
+# data (tools/activity.mjs) and commits only when something changed.
+name: Activity
+
+on:
+  schedule:
+    - cron: "41 2 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [tools/activity.mjs, .github/workflows/activity.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: activity
+  cancel-in-progress: false
+
+jobs:
+  activity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+
+      - run: node tools/activity.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      # Commits come from the Actions bot, so they never count as
+      # Justine's own contributions.
+      - name: Commit if the README changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh profile activity" -- README.md
+          git pull --rebase origin main
+          git push origin HEAD:main
