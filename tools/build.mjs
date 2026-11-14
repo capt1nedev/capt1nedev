@@ -519,6 +519,19 @@ ${arrow}`;
   return doc({ w: W, h: H, title: label, body });
 }
 
+// Pull request states for the activity table that tools/activity.mjs writes.
+function statusBadge(label, color) {
+  const H = 20;
+  const size = 9.5;
+  const tracking = 0.1;
+  const str = label.toUpperCase();
+  const W = Math.ceil(21 + measure(fonts.mono500, str, size, tracking) + 9);
+  const body = `<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="9.5" fill="${C.deep}" stroke="${color}" stroke-opacity=".45"/>
+<circle cx="12" cy="10" r="3" fill="${color}"/>
+${text(fonts.mono500, str, { x: 21, y: 13.4, size, tracking, fill: color })}`;
+  return doc({ w: W, h: H, title: label, body });
+}
+
 save('hero.svg', hero());
 save('terminal.svg', terminalCard());
 save('projects/resumiq.svg', featuredCard());
@@ -529,3 +542,7 @@ save('buttons/work.svg', button('View my work', { primary: true, external: false
 save('buttons/contact.svg', button('Get in touch', {}));
 save('buttons/linkedin.svg', button('LinkedIn', {}));
 save('buttons/resumiq.svg', button('resumiq.tech', {}));
+save('status/open.svg', statusBadge('Open', C.signal));
+save('status/merged.svg', statusBadge('Merged', C.violet));
+save('status/closed.svg', statusBadge('Closed', C.ember));
+save('status/draft.svg', statusBadge('Draft', C.chrome));
