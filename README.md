@@ -75,6 +75,32 @@ Right now I'm an Associate Software Developer at Thrive Dynamic Business Solutio
 ## <samp>// telemetry</samp>
 
 <!-- activity:start -->
+<!-- Written by tools/activity.mjs every day. Edits inside this block get overwritten. -->
+
+<p align="center"><samp><b>464</b> contributions in the last year · <b>132</b> in the last 30 days · last active <b>Nov 14, 2026</b></samp></p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/capt1nedev/capt1nedev/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/capt1nedev/capt1nedev/output/snake.svg" />
+  <img width="100%" alt="A snake eating Justine's GitHub contribution graph" src="https://raw.githubusercontent.com/capt1nedev/capt1nedev/output/snake.svg" />
+</picture>
+
+**Pull requests to other projects**
+
+| Status | Pull request | Opened |
+| :-- | :-- | :-- |
+| <img src="./assets/status/open.svg" height="20" alt="open" /> | [kucherenko/jscpd#1158](https://github.com/kucherenko/jscpd/pull/1158)<br /><sub>fix(action): propagate scanner exit status</sub> | Oct 7, 2026 |
+| <img src="./assets/status/open.svg" height="20" alt="open" /> | [kucherenko/jscpd#1157](https://github.com/kucherenko/jscpd/pull/1157)<br /><sub>fix(html-reporter): declare finder runtime dependency</sub> | Oct 7, 2026 |
+| <img src="./assets/status/open.svg" height="20" alt="open" /> | [matthewwithanm/python-markdownify#284](https://github.com/matthewwithanm/python-markdownify/pull/284)<br /><sub>Bound table colspan parsing before integer conversion</sub> | Oct 7, 2026 |
+
+**Public repositories**
+
+| Repository | About | Latest |
+| :-- | :-- | :-- |
+| [DPI](https://github.com/capt1nedev/DPI) | Sens Lab: recommends Valorant mouse settings from repeated in-browser aim tests | TypeScript · updated Oct 10, 2026 |
+| [docx-repro](https://github.com/capt1nedev/docx-repro) | Minimize DOCX parser bug reports while preserving a user-defined symptom. | [v0.1.2](https://github.com/capt1nedev/docx-repro/releases/tag/v0.1.2) · Python · updated Oct 7, 2026 |
+
+<sub>Refreshed every day from public GitHub data. Private work counts toward the totals but is never named.</sub>
 <!-- activity:end -->
 
 <br /><br />
