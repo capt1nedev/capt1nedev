@@ -77,7 +77,7 @@ Right now I'm an Associate Software Developer at Thrive Dynamic Business Solutio
 <!-- activity:start -->
 <!-- Written by tools/activity.mjs every day. Edits inside this block get overwritten. -->
 
-<p align="center"><samp><b>718</b> contributions in the last year · <b>272</b> in the last 30 days · last active <b>Nov 21, 2026</b></samp></p>
+<p align="center"><samp><b>726</b> contributions in the last year · <b>280</b> in the last 30 days · last active <b>Nov 22, 2026</b></samp></p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/capt1nedev/capt1nedev/output/snake-dark.svg" />
